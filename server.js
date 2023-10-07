@@ -15,7 +15,9 @@ app.get("/", (req, res) =>{
 app.get("/chat", (req, res) =>{
     res.sendFile(__dirname + "/client/chat.html");
 })
-
+app.get("/register", (req, res) =>{
+    res.sendFile(__dirname + "/client/register.html");
+})
 io.on("connection", (socket) =>{
 
     console.log("connected");
